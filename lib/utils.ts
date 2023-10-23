@@ -6,10 +6,12 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export async function getGuilds(token: string): Promise<PartialGuild[]> {
+export async function getGuilds(
+  authorization: string
+): Promise<PartialGuild[]> {
   const res = await fetch("https://discord.com/api/users/@me/guilds", {
     headers: {
-      Authorization: token,
+      authorization,
     },
   })
   if (!res.ok) {
