@@ -69,7 +69,7 @@ export default function ServerList({
             href={
               redirectToDashboard
                 ? `/dashboard/${guild.id}`
-                : `https://discord.com/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_DISCORD_CLIENT_ID}&scope=applications.commands+bot&permissions=8&guild_id=${guild.id}&disable_guild_select=true&response_type=code&redirect_uri=http://localhost:3000/api/auth/server-auth`
+                : `https://discord.com/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_DISCORD_CLIENT_ID}&scope=applications.commands+bot&permissions=8&guild_id=${guild.id}&disable_guild_select=true&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_URL}/api/auth/server-auth`
             }
           />
         )
