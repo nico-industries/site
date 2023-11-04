@@ -16,7 +16,7 @@ export default async function Dashboard() {
   }
 
   const userGuilds = await getGuilds(`Bearer ${session.user.accessToken}`)
-  const botGuilds = await getGuilds(`Bot ${process.env.DISCORD_BOT_TOKEN}`)
+  const botGuilds = await getGuilds(`Bot ${process.env.TOKEN}`)
 
   const adminUserGuilds = userGuilds.filter(
     ({ permissions }) => (parseInt(permissions) & 0x20) === 0x20
