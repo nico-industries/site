@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "eslint": "8.50.0",
-    "eslint-config-next": "13.5.2",
+    "eslint-config-next": "14.0.2",
     "prisma": "^5.3.1"
   }
 }
