@@ -14,13 +14,13 @@ export default function Navbar() {
         <Logo />
         <IconButton
           text="Discord"
-          href="/"
+          href="https://discord.gg/hYwSBu7jnN"
           icon={<BsDiscord />}
           variant="secondary"
         />
         <IconButton
           text="Invite"
-          href="/"
+          href="https://discord.com/api/oauth2/authorize?client_id=1056742271913041972&permissions=4398046510967&scope=applications.commands%20bot"
           icon={<FaUserPlus />}
           variant="secondary"
         />
