@@ -10,7 +10,10 @@ import { Separator } from "@/components/ui/separator"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Skurczybyki Dashboard",
+  title: {
+    default: "Skurczybyki Dashboard",
+    template: "%s | Skurczybyki Dashboard",
+  },
   description: "Skurczybyki Discord Bot Dashboard",
 }
 

@@ -50,7 +50,7 @@ export default function Dropdown() {
         <DropdownMenuLabel>{session.user?.name}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <Link href="/servers">
+          <Link href="/dashboard">
             <DropdownMenuItem className="flex gap-2">
               <Server />
               <Label>Servers</Label>

@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 type IconButtonProps = ButtonProps & {
-  text: string
+  text?: string
   icon: React.ReactNode
-  href: string
+  href?: string
 }
 
 export default function IconButton({
@@ -18,19 +18,24 @@ export default function IconButton({
   className,
   ...props
 }: IconButtonProps) {
-  return (
-    <Button
-      asChild
-      className={cn("flex gap-2 my-auto cursor-pointer", className)}
-      {...props}
-    >
-      <Link href={href}>
-        {icon}
+  const content = (
+    <>
+      {icon}
+      {text && (
         <div className="hidden sm:block">
           <Label className="cursor-pointer">{text}</Label>
           <span className="sr-only">{text}</span>
         </div>
-      </Link>
+      )}
+    </>
+  )
+  return (
+    <Button
+      asChild={!!href}
+      className={cn("flex gap-2 my-auto cursor-pointer", className)}
+      {...props}
+    >
+      {href ? <Link href={href}>{content}</Link> : content}
     </Button>
   )
 }

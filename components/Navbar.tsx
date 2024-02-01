@@ -9,7 +9,7 @@ import IconButton from "./IconButton"
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between m-2">
+    <header className="flex justify-between m-2">
       <div className="flex justify-start gap-4">
         <Logo />
         <IconButton
@@ -29,6 +29,6 @@ export default function Navbar() {
         <ToggleTheme />
         <Dropdown />
       </div>
-    </nav>
+    </header>
   )
 }

@@ -1,4 +1,4 @@
-import { ServerListSkeleton } from "@/components/ServerList"
+import { ServerListSkeleton } from "@/components/GuildList"
 
 export default function Loading() {
   return (
