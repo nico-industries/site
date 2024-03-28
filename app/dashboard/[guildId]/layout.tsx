@@ -1,7 +1,4 @@
-"use client"
-
 import { notFound } from "next/navigation"
-import { useGuilds } from "@/app/contexts/GuildsContext"
 import CurrentGuildContext from "@/app/contexts/CurrentGuildContext"
 import { SidebarGuildList } from "@/components/GuildList"
 import { Separator } from "@/components/ui/separator"
@@ -14,15 +11,26 @@ export default async function ServerLayout({
   children: React.ReactNode
   params: { guildId: string }
 }) {
-  const { mutualGuilds } = useGuilds()
-  console.log(params.guildId)
-  const guild = mutualGuilds.find((guild) => guild.id === params.guildId)
-  if (!guild) {
+  const guildRes = await fetch(
+    `https://discord.com/api/guilds/${params.guildId}`,
+    { headers: { authorization: `Bot ${process.env.TOKEN}` } }
+  )
+  if (!guildRes.ok) {
     notFound()
   }
+  const guild = await guildRes.json()
+
+  const channelsRes = await fetch(
+    `https://discord.com/api/guilds/${params.guildId}/channels`,
+    { headers: { authorization: `Bot ${process.env.TOKEN}` } }
+  )
+  if (!channelsRes.ok) {
+    notFound()
+  }
+  const channels = await channelsRes.json()
 
   return (
-    <CurrentGuildContext guild={guild}>
+    <CurrentGuildContext guild={guild} channels={channels}>
       <div className="flex items-start h-[calc(100vh-65px)]">
         <SidebarGuildList />
         <Separator orientation="vertical" />

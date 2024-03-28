@@ -1,3 +1,5 @@
+"use client"
+
 import { useCurrentGuild } from "@/app/contexts/CurrentGuildContext"
 import { Button } from "./ui/button"
 import { Separator } from "./ui/separator"
@@ -16,7 +18,7 @@ const SidebarElements: SidebarElement[] = [
 ]
 
 function SidebarElement({ category }: { category: SidebarElement }) {
-  const guild = useCurrentGuild()
+  const { guild } = useCurrentGuild()
 
   return (
     <Button
@@ -32,13 +34,11 @@ function SidebarElement({ category }: { category: SidebarElement }) {
 }
 
 export default function GuildSidebarSections() {
-  const currentGuild = useCurrentGuild()
+  const { guild } = useCurrentGuild()
 
   return (
     <aside className="flex flex-col mx-4">
-      <span className="mx-1 mt-2 text-center font-bold">
-        {currentGuild.name}
-      </span>
+      <span className="mx-1 mt-2 text-center font-bold">{guild.name}</span>
       <Separator className="my-2 bg-black dark:bg-white" />
       {SidebarElements.map((category, i) => (
         <SidebarElement key={i} category={category} />

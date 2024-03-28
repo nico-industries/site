@@ -7,6 +7,14 @@ generator client {
     provider = "prisma-client-js"
 }
 
+model Guild {
+    id             String  @id
+    welcomeChannel String?
+    welcomeMessage String?
+    leaveChannel   String?
+    leaveMessage   String?
+}
+
 model Account {
     id                String  @id @default(cuid())
     userId            String

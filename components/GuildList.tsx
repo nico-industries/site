@@ -1,6 +1,6 @@
 "use client"
 
-import { PartialGuild } from "@/app/types"
+import { APIPartialGuild } from "discord-api-types/v10"
 import { Avatar, AvatarImage } from "./ui/avatar"
 import { Label } from "./ui/label"
 import Link from "next/link"
@@ -32,7 +32,7 @@ export function GuildButton({
   size = "lg",
   tooltipDirection = "bottom",
 }: {
-  guild: PartialGuild
+  guild: APIPartialGuild
   href: string
   size?: "sm" | "lg"
   tooltipDirection?: "top" | "bottom" | "left" | "right"
@@ -90,7 +90,7 @@ export function ChooseGuildList({
   guilds,
   redirectToDashboard,
 }: {
-  guilds: PartialGuild[]
+  guilds: APIPartialGuild[]
   redirectToDashboard?: boolean
 }) {
   if (!guilds.length) {
@@ -132,7 +132,7 @@ export function ServerListSkeleton() {
   )
 }
 
-function AddToGuildButton({ guilds }: { guilds: PartialGuild[] }) {
+function AddToGuildButton({ guilds }: { guilds: APIPartialGuild[] }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -169,7 +169,7 @@ function AddToGuildButton({ guilds }: { guilds: PartialGuild[] }) {
 
 export function SidebarGuildList() {
   const { mutualGuilds, inviteGuilds } = useGuilds()
-  const currentGuild = useCurrentGuild()
+  const { guild: currentGuild } = useCurrentGuild()
 
   return (
     <nav className="flex flex-col items-center justify-center">

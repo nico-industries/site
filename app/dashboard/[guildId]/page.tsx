@@ -1,8 +1,13 @@
-"use client"
+import WelcomeForm from "@/components/WelcomeForm"
+import { ensureGuildExists } from "@/lib/db"
 
-import { useCurrentGuild } from "@/app/contexts/CurrentGuildContext"
+export const dynamic = "force-dynamic"
 
-export default async function Dashboard() {
-  const guild = useCurrentGuild()
-  return <h1>{JSON.stringify(guild)}</h1>
+export default async function Page({
+  params,
+}: {
+  params: { guildId: string }
+}) {
+  const guild = await ensureGuildExists(params.guildId)
+  return <WelcomeForm guild={guild} />
 }
