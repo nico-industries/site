@@ -1,6 +1,6 @@
 "use client"
 
-import { APIPartialGuild } from "discord-api-types/v10"
+import { RESTAPIPartialCurrentUserGuild } from "discord-api-types/v10"
 import { Avatar, AvatarImage } from "./ui/avatar"
 import { Label } from "./ui/label"
 import Link from "next/link"
@@ -32,7 +32,7 @@ export function GuildButton({
   size = "lg",
   tooltipDirection = "bottom",
 }: {
-  guild: APIPartialGuild
+  guild: RESTAPIPartialCurrentUserGuild
   href: string
   size?: "sm" | "lg"
   tooltipDirection?: "top" | "bottom" | "left" | "right"
@@ -90,7 +90,7 @@ export function ChooseGuildList({
   guilds,
   redirectToDashboard,
 }: {
-  guilds: APIPartialGuild[]
+  guilds: RESTAPIPartialCurrentUserGuild[]
   redirectToDashboard?: boolean
 }) {
   if (!guilds.length) {
@@ -132,7 +132,11 @@ export function ServerListSkeleton() {
   )
 }
 
-function AddToGuildButton({ guilds }: { guilds: APIPartialGuild[] }) {
+function AddToGuildButton({
+  guilds,
+}: {
+  guilds: RESTAPIPartialCurrentUserGuild[]
+}) {
   return (
     <Dialog>
       <DialogTrigger asChild>

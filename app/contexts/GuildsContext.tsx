@@ -1,11 +1,11 @@
 "use client"
 
 import { createContext, useContext } from "react"
-import { PartialGuild } from "../types"
+import { RESTAPIPartialCurrentUserGuild } from "discord-api-types/v10"
 
 interface Guilds {
-  mutualGuilds: PartialGuild[]
-  inviteGuilds: PartialGuild[]
+  mutualGuilds: RESTAPIPartialCurrentUserGuild[]
+  inviteGuilds: RESTAPIPartialCurrentUserGuild[]
 }
 
 const Context = createContext<Guilds | null>(null)
