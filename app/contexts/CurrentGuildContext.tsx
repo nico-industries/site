@@ -26,7 +26,7 @@ export function useCurrentGuild(): CurrentGuild {
   const currentGuild = useContext(Context)
   if (!currentGuild?.guild || !currentGuild.channels) {
     throw new Error(
-      "No CurrentGuildContext.Provider found when calling useGuild"
+      "No CurrentGuildContext.Provider found when calling useCurrentGuild"
     )
   }
   return currentGuild

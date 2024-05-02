@@ -27,7 +27,7 @@ export default async function GuildsContext({
 export function useGuilds(): Guilds {
   const guilds = useContext(Context)
   if (!guilds?.mutualGuilds || !guilds.inviteGuilds) {
-    throw new Error("No GuildContext.Provider found when calling useGuild")
+    throw new Error("No GuildContext.Provider found when calling useGuilds")
   }
   return guilds
 }
