@@ -16,7 +16,13 @@ module.exports = {
       },
     },
     extend: {
+      backgroundSize:{
+        'size-200': "200% 200%",
+      },
       colors: {
+        aqua: "#13F1FF",
+        limey: "#04E100",
+        blueish: "#1C88D6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
