@@ -1,13 +1,12 @@
-import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { getServerSession } from "next-auth"
-import SessionProvider from "@/components/providers/SessionProvider"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
-import { ThemeProvider } from "@/components/providers/ThemeProvider"
 import authOptions from "@/app/api/auth/options"
-import { Separator } from "@/components/ui/separator"
+import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
+import SessionProvider from "@/components/providers/SessionProvider"
+import { ThemeProvider } from "@/components/providers/ThemeProvider"
+import type { Metadata } from "next"
+import { getServerSession } from "next-auth"
+import { Inter } from "next/font/google"
+import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {

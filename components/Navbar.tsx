@@ -1,17 +1,17 @@
 "use client"
 
-import ToggleTheme from "./ToggleTheme"
-import Dropdown from "./Dropdown"
+import { Separator } from "@/components/ui/separator"
 import { BsDiscord } from "react-icons/bs"
 import { FaUserPlus } from "react-icons/fa"
-import Logo from "./Logo"
+import Dropdown from "./Dropdown"
 import IconButton from "./IconButton"
-import { Separator } from "@/components/ui/separator"
+import Logo from "./Logo"
+import ToggleTheme from "./ToggleTheme"
 
 export default function Navbar() {
   return (
     <div className="sticky -top-1 z-50 flex flex-col backdrop-blur-3xl backdrop-filter">
-      <header className="sticky top-2 m-2 flex justify-between px-3">
+      <header className="sticky top-2 flex justify-between p-2 px-3">
         <div className="flex justify-start gap-6">
           <Logo />
           <div className="hidden justify-start gap-3 sm:flex">
