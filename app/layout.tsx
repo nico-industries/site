@@ -1,20 +1,20 @@
-import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { getServerSession } from "next-auth"
-import SessionProvider from "@/components/providers/SessionProvider"
-import Navbar from "@/components/Navbar"
-import { ThemeProvider } from "@/components/providers/ThemeProvider"
 import authOptions from "@/app/api/auth/options"
-import { Separator } from "@/components/ui/separator"
+import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
+import SessionProvider from "@/components/providers/SessionProvider"
+import { ThemeProvider } from "@/components/providers/ThemeProvider"
+import type { Metadata } from "next"
+import { getServerSession } from "next-auth"
+import { Inter } from "next/font/google"
+import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Skurczybyki Dashboard",
-    template: "%s | Skurczybyki Dashboard",
+    default: "Nico Dashboard",
+    template: "%s | Nico Dashboard",
   },
-  description: "Skurczybyki Discord Bot Dashboard",
+  description: "Nico Discord Bot Dashboard",
 }
 
 export default async function RootLayout({
@@ -29,8 +29,8 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
-            <Separator />
             {children}
+            <Footer />
           </ThemeProvider>
         </SessionProvider>
       </body>
