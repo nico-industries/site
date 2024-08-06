@@ -13,7 +13,6 @@ export default function Feature({
   heading,
   body,
   reverse,
-  ...props
 }: FeatureCardProps) {
   return (
     <motion.div
@@ -25,7 +24,6 @@ export default function Feature({
         "flex w-full flex-col items-center justify-around gap-28 xs:px-6 sm:px-20",
         reverse ? "sm:flex-row-reverse" : "sm:flex-row",
       )}
-      {...props}
     >
       <article className="w-full max-w-lg rounded-lg border p-6">
         <h1 className="text-nowrap text-2xl capitalize leading-10 tracking-tight">
@@ -34,7 +32,7 @@ export default function Feature({
         <p className="mt-2 line-clamp-3 text-balance text-xs/tight leading-relaxed sm:text-sm/tight">
           {body}
         </p>
-        <Button variant={"outline"} className="mt-6 w-full">
+        <Button variant="outline" className="mt-6 w-full">
           Learn more
         </Button>
       </article>

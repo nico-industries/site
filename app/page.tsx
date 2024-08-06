@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main className="flex flex-grow flex-col items-center gap-7">
       <section className="flex w-full flex-col items-center px-6 pb-24 pt-32 lg:pt-64">
-        <div className="absolute -left-1 top-8 -z-10 h-80 w-40 bg-gradient-to-br from-primary from-5% opacity-30 blur-3xl filter sm:w-96"></div>
+        <div className="absolute -left-1 top-8 -z-10 h-80 w-40 bg-gradient-to-br from-primary from-5% opacity-30 blur-3xl filter sm:w-96" />
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center">
@@ -66,7 +66,7 @@ export default async function Home() {
         <h1 className="text-2xl md:text-3xl lg:text-4xl">
           Explore <span className="text-limey">all</span> of them
         </h1>
-        <Button variant={"outline"} className="w-10/12 md:w-8/12">
+        <Button variant="outline" className="w-10/12 md:w-8/12">
           Explore all features
         </Button>
       </section>

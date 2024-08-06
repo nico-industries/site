@@ -4,7 +4,7 @@ import LogoIcon from "./LogoIcon"
 
 export default function InvitationCard() {
   return (
-    <div className="">
+    <div>
       <section className="flex flex-col items-center px-6 py-24">
         <article className="flex w-full max-w-4xl flex-row items-center justify-between gap-4 rounded-md border p-5 sm:justify-around lg:px-16 lg:py-8">
           <div className="flex flex-col">

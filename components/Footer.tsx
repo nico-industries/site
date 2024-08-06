@@ -58,11 +58,11 @@ export default function Footer() {
           <div className="flex flex-row justify-start gap-x-5 max-md:py-5">
             <IconButton
               icon={<FaGithub className="size-6" />}
-              variant={"ghost"}
+              variant="ghost"
             />
             <IconButton
               icon={<FaDiscord className="size-6" />}
-              variant={"ghost"}
+              variant="ghost"
             />
           </div>
         </div>

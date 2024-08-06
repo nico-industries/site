@@ -8,25 +8,25 @@ export default function Features() {
       temporibus, enim facilis, ipsam pariatur autem qui eum earum hic
       dolorem deserunt quas dignissimos nobis ullam! Perspiciatis sunt vero
       quae!"
-      ></Feature>
+      />
       <Feature
         heading="Example feature"
         body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quisquam
       temporibus, enim facilis,"
         reverse
-      ></Feature>
+      />
       <Feature
         heading="Example feature"
         body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quisquam
       temporibus, enim facilis,"
-      ></Feature>
+      />
       <Feature
         heading="Example feature"
         body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quisquam
       temporibus, enim facilis Lorem ipsum dolor sit amet consectetur
       adipisicing elit."
         reverse
-      ></Feature>
+      />
       <Feature heading="xd" body="" />
     </section>
   )
