@@ -29,7 +29,9 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
-            {children}
+            <main className="flex-1">
+              {children}
+            </main>
             <Footer />
           </ThemeProvider>
         </SessionProvider>
