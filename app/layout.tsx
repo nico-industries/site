@@ -1,5 +1,4 @@
 import authOptions from "@/app/api/auth/options"
-import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import SessionProvider from "@/components/providers/SessionProvider"
 import { ThemeProvider } from "@/components/providers/ThemeProvider"
@@ -29,8 +28,7 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
-            {children}
-            <Footer />
+            <main className="flex-1">{children}</main>
           </ThemeProvider>
         </SessionProvider>
       </body>

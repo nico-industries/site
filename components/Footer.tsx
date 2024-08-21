@@ -4,9 +4,9 @@ import IconButton from "./IconButton"
 
 export default function Footer() {
   return (
-    <div className="flex flex-col">
+    <footer className="flex flex-col">
       <Separator />
-      <footer className="m-auto flex w-full max-w-7xl flex-col justify-between px-6 py-4">
+      <div className="m-auto flex w-full max-w-7xl flex-col justify-between px-6 py-4">
         <div className="flex w-full flex-col md:flex-row md:justify-between">
           <div>
             <h1 className="text-lg font-bold leading-10 tracking-wider">
@@ -66,7 +66,7 @@ export default function Footer() {
             />
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }

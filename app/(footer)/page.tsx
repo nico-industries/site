@@ -9,8 +9,8 @@ import { FiChevronsDown } from "react-icons/fi"
 
 export default async function Home() {
   return (
-    <main className="flex flex-grow flex-col items-center gap-7">
-      <section className="flex w-full flex-col items-center px-6 pb-24 pt-32 lg:pt-64">
+    <section className="flex flex-grow flex-col items-center gap-7">
+      <div className="flex w-full flex-col items-center px-6 pb-24 pt-32 lg:pt-64">
         <div className="absolute -left-1 top-8 -z-10 h-80 w-40 bg-gradient-to-br from-primary from-5% opacity-30 blur-3xl filter sm:w-96" />
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-4">
@@ -57,7 +57,7 @@ export default async function Home() {
           Learn more
           <FiChevronsDown className="animate-bounce text-primary" />
         </Link>
-      </section>
+      </div>
 
       <DiscordInput />
       <Features />
@@ -72,6 +72,6 @@ export default async function Home() {
       </section>
 
       <InvitationCard />
-    </main>
+    </section>
   )
 }
