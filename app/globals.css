@@ -58,6 +58,6 @@
     @apply border-border;
   }
   body {
-    @apply min-h-screen bg-background text-foreground flex flex-col;
+    @apply flex min-h-screen flex-col bg-background text-foreground;
   }
 }
